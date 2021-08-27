@@ -180,6 +180,14 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   
+  if( numero < 2) return false;
+  if(numero === 2) return true;
+  for(var i = 2; i < numero; i++) {
+    if(numero % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function esVerdadero(valor){
@@ -198,9 +206,11 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let mult = 0
-  for (let i = 0; i < 60; i+6) {
-    mult[i]
+  let mult = []
+  for (let i = 0; i <  11; i++) {
+    //
+    mult.push(6*i)
+    //
   }
   return mult
 }
@@ -208,7 +218,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero <= 999 ) {
+  if (numero > 99 && numero < 999 ) {
     return true
   } else {
     return false
@@ -220,12 +230,12 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
   let i = 0
-  let result = ''
+  let result = numero
   do {
+    result = result + 5;
     i = i + 1;
-  result = result + 5;
 
-  } while (i < 5);
+  } while (i < 8);
   return result
 }
 
